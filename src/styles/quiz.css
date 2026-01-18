@@ -1,0 +1,228 @@
+/**
+ * quiz.css - 퀴즈 관련 스타일
+ */
+
+/* 문제 카드 */
+.question-card {
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-md);
+}
+
+.question-text {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--color-gray-900);
+  margin-bottom: var(--spacing-xl);
+  line-height: 1.5;
+}
+
+/* 4지선다 옵션 */
+.options-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.option-btn {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: var(--color-gray-50);
+  border: 2px solid var(--color-gray-200);
+  border-radius: var(--radius-lg);
+  text-align: left;
+  transition: all var(--transition-fast);
+}
+
+.option-btn:hover:not(.disabled) {
+  border-color: var(--color-primary);
+  background: var(--color-primary-light);
+}
+
+.option-btn.selected {
+  border-color: var(--color-primary);
+  background: var(--color-primary-light);
+}
+
+.option-btn.correct {
+  border-color: var(--color-success);
+  background: var(--color-success-light);
+}
+
+.option-btn.incorrect {
+  border-color: var(--color-error);
+  background: var(--color-error-light);
+}
+
+.option-btn.disabled {
+  cursor: default;
+}
+
+.option-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  color: var(--color-gray-600);
+  margin-right: var(--spacing-md);
+  flex-shrink: 0;
+}
+
+.option-btn.selected .option-label {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.option-btn.correct .option-label {
+  background: var(--color-success);
+  color: var(--color-white);
+}
+
+.option-btn.incorrect .option-label {
+  background: var(--color-error);
+  color: var(--color-white);
+}
+
+.option-text {
+  font-size: var(--font-size-base);
+  color: var(--color-gray-700);
+  flex: 1;
+}
+
+/* O/X 버튼 */
+.ox-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+}
+
+.ox-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xl);
+  background: var(--color-gray-50);
+  border: 3px solid var(--color-gray-200);
+  border-radius: var(--radius-xl);
+  transition: all var(--transition-fast);
+}
+
+.ox-btn:hover:not(.disabled) {
+  transform: scale(1.02);
+}
+
+.ox-btn--o:hover:not(.disabled) {
+  border-color: var(--color-primary);
+  background: var(--color-primary-light);
+}
+
+.ox-btn--x:hover:not(.disabled) {
+  border-color: var(--color-error);
+  background: var(--color-error-light);
+}
+
+.ox-btn.selected.ox-btn--o {
+  border-color: var(--color-primary);
+  background: var(--color-primary-light);
+}
+
+.ox-btn.selected.ox-btn--x {
+  border-color: var(--color-error);
+  background: var(--color-error-light);
+}
+
+.ox-btn.correct {
+  border-color: var(--color-success);
+  background: var(--color-success-light);
+}
+
+.ox-btn.incorrect {
+  border-color: var(--color-error);
+  background: var(--color-error-light);
+}
+
+.ox-btn.disabled {
+  cursor: default;
+}
+
+.ox-icon {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.ox-label {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--color-gray-600);
+}
+
+/* 다음 버튼 영역 */
+.quiz-actions {
+  margin-top: var(--spacing-xl);
+  display: flex;
+  justify-content: center;
+}
+
+/* 피드백 메시지 */
+.feedback {
+  margin-top: var(--spacing-lg);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  font-weight: 500;
+  animation: fadeIn 0.3s ease;
+}
+
+.feedback--correct {
+  background: var(--color-success-light);
+  color: var(--color-success);
+}
+
+.feedback--incorrect {
+  background: var(--color-error-light);
+  color: var(--color-error);
+}
+
+.feedback__text {
+  font-size: var(--font-size-base);
+}
+
+.feedback__explanation {
+  font-size: var(--font-size-sm);
+  margin-top: var(--spacing-xs);
+  opacity: 0.8;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 반응형 */
+@media (max-width: 480px) {
+  .question-text {
+    font-size: var(--font-size-lg);
+  }
+
+  .ox-icon {
+    font-size: 2.5rem;
+  }
+
+  .ox-btn {
+    padding: var(--spacing-lg);
+  }
+}

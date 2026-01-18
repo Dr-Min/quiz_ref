@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>퀴즈 진행 중</title>
+  <link rel="stylesheet" href="/src/styles/base.css">
+  <link rel="stylesheet" href="/src/styles/layout.css">
+  <link rel="stylesheet" href="/src/styles/components.css">
+  <link rel="stylesheet" href="/src/styles/quiz.css">
+</head>
+<body>
+  <div class="container">
+    <!-- 퀴즈 헤더 -->
+    <header class="quiz-header">
+      <a href="/" class="back-btn">← 돌아가기</a>
+      <div class="quiz-info">
+        <span id="quiz-type-label" class="quiz-type-label">4지선다</span>
+        <span id="question-counter" class="question-counter">1 / 5</span>
+      </div>
+    </header>
+
+    <!-- 진행률 바 -->
+    <div id="progress-bar-container" class="progress-container"></div>
+
+    <!-- 퀴즈 영역 -->
+    <main id="quiz-content" class="quiz-content">
+      <!-- 동적으로 렌더링 -->
+    </main>
+
+    <!-- 결과 화면 (초기 숨김) -->
+    <div id="result-screen" class="result-screen hidden">
+      <!-- 동적으로 렌더링 -->
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>퀴즈 레퍼런스</title>
+  <link rel="stylesheet" href="/src/styles/base.css">
+  <link rel="stylesheet" href="/src/styles/layout.css">
+  <link rel="stylesheet" href="/src/styles/components.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 class="header__title">퀴즈 레퍼런스</h1>
+      <p class="header__subtitle">사내 교육 및 이벤트용 퀴즈 템플릿</p>
+    </header>
+
+    <main class="quiz-select">
+      <h2 class="section-title">퀴즈 유형 선택</h2>
+
+      <div class="card-grid">
+        <a href="/quiz.html?type=multiple-choice" class="quiz-card">
+          <div class="quiz-card__icon">📝</div>
+          <h3 class="quiz-card__title">4지선다 퀴즈</h3>
+          <p class="quiz-card__desc">4개의 보기 중 정답을 선택하는 퀴즈입니다.</p>
+          <span class="quiz-card__badge">5문제</span>
+        </a>
+
+        <a href="/quiz.html?type=ox" class="quiz-card">
+          <div class="quiz-card__icon">⭕</div>
+          <h3 class="quiz-card__title">O/X 퀴즈</h3>
+          <p class="quiz-card__desc">참과 거짓을 판단하는 퀴즈입니다.</p>
+          <span class="quiz-card__badge">5문제</span>
+        </a>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>© 2025 Quiz Reference Template</p>
+    </footer>
+  </div>
+</body>
+</html>

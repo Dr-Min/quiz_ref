@@ -1,0 +1,14 @@
+{
+  "name": "quiz-reference",
+  "version": "1.0.0",
+  "description": "퀴즈 레퍼런스 - 4지선다, O/X 퀴즈 템플릿",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}

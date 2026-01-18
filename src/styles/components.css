@@ -1,0 +1,273 @@
+/**
+ * components.css - 공통 컴포넌트 스타일
+ */
+
+/* 버튼 */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-md) var(--spacing-xl);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-fast);
+  min-width: 120px;
+}
+
+.btn--primary {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn--primary:hover {
+  background: var(--color-primary-hover);
+}
+
+.btn--secondary {
+  background: var(--color-gray-100);
+  color: var(--color-gray-700);
+}
+
+.btn--secondary:hover {
+  background: var(--color-gray-200);
+}
+
+.btn--success {
+  background: var(--color-success);
+  color: var(--color-white);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* 프로그레스 바 */
+.progress-container {
+  margin-bottom: var(--spacing-xl);
+}
+
+.progress-bar {
+  height: 8px;
+  background: var(--color-gray-200);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin-bottom: var(--spacing-md);
+}
+
+.progress-bar__fill {
+  height: 100%;
+  background: var(--color-primary);
+  border-radius: var(--radius-full);
+  transition: width var(--transition-normal);
+}
+
+.progress-bar__fill.complete {
+  background: var(--color-success);
+}
+
+.progress-steps {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing-xs);
+}
+
+.progress-step {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--color-gray-400);
+  background: var(--color-gray-100);
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+}
+
+.progress-step.active {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.progress-step.completed {
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+.progress-step.correct {
+  background: var(--color-success-light);
+  color: var(--color-success);
+}
+
+.progress-step.incorrect {
+  background: var(--color-error-light);
+  color: var(--color-error);
+}
+
+/* 결과 화면 */
+.result-screen {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.result-card {
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-2xl);
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.result-header {
+  margin-bottom: var(--spacing-lg);
+}
+
+.result-title {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--color-gray-900);
+}
+
+.result-score {
+  margin-bottom: var(--spacing-lg);
+}
+
+.score-circle {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: var(--color-gray-50);
+  border: 4px solid var(--grade-color, var(--color-primary));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.score-grade {
+  font-size: var(--font-size-3xl);
+  font-weight: 800;
+  color: var(--grade-color, var(--color-primary));
+}
+
+.score-value {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-gray-600);
+}
+
+.result-message {
+  font-size: var(--font-size-lg);
+  color: var(--color-gray-600);
+  margin-bottom: var(--spacing-xl);
+}
+
+.result-stats {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+  padding: var(--spacing-md);
+  background: var(--color-gray-50);
+  border-radius: var(--radius-lg);
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-label {
+  display: block;
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-500);
+  margin-bottom: var(--spacing-xs);
+}
+
+.stat-value {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-gray-700);
+}
+
+.stat-item--correct .stat-value {
+  color: var(--color-success);
+}
+
+.stat-item--incorrect .stat-value {
+  color: var(--color-error);
+}
+
+.result-actions {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+}
+
+/* 오답 노트 */
+.result-details {
+  margin-top: var(--spacing-xl);
+  padding-top: var(--spacing-xl);
+  border-top: 1px solid var(--color-gray-200);
+  text-align: left;
+}
+
+.details-title {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--color-gray-700);
+  margin-bottom: var(--spacing-md);
+}
+
+.details-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.details-item {
+  display: flex;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  background: var(--color-error-light);
+  border-radius: var(--radius-md);
+}
+
+.details-number {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-error);
+}
+
+.details-content {
+  flex: 1;
+}
+
+.details-question {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-700);
+  margin-bottom: var(--spacing-xs);
+}
+
+.details-answer {
+  font-size: var(--font-size-xs);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.your-answer {
+  color: var(--color-error);
+}
+
+.correct-answer {
+  color: var(--color-success);
+  font-weight: 600;
+}
