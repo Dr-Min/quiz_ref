@@ -10,27 +10,46 @@
 </head>
 <body>
   <div class="container">
+    <!-- 테마 토글 -->
+    <div class="theme-toggle">
+      <span class="theme-toggle__label">레퍼런스 테마</span>
+      <div class="theme-toggle__buttons">
+        <button class="toggle-btn" data-theme="cosmetic">
+          <span class="toggle-btn__icon">💄</span>
+          <span class="toggle-btn__text">화장품</span>
+        </button>
+        <button class="toggle-btn" data-theme="haircare">
+          <span class="toggle-btn__icon">💇</span>
+          <span class="toggle-btn__text">헤어케어</span>
+        </button>
+        <button class="toggle-btn" data-theme="event">
+          <span class="toggle-btn__icon">🎉</span>
+          <span class="toggle-btn__text">이벤트</span>
+        </button>
+      </div>
+    </div>
+
     <header class="header">
-      <h1 class="header__title">퀴즈 레퍼런스</h1>
-      <p class="header__subtitle">사내 교육 및 이벤트용 퀴즈 템플릿</p>
+      <h1 class="header__title" id="main-title">퀴즈 레퍼런스</h1>
+      <p class="header__subtitle" id="main-subtitle">사내 교육 및 이벤트용 퀴즈 템플릿</p>
     </header>
 
     <main class="quiz-select">
       <h2 class="section-title">퀴즈 유형 선택</h2>
 
       <div class="card-grid">
-        <a href="/quiz.html?type=multiple-choice" class="quiz-card">
-          <div class="quiz-card__icon">📝</div>
-          <h3 class="quiz-card__title">4지선다 퀴즈</h3>
-          <p class="quiz-card__desc">4개의 보기 중 정답을 선택하는 퀴즈입니다.</p>
-          <span class="quiz-card__badge">5문제</span>
+        <a href="/quiz.html?type=multiple-choice" class="quiz-card" id="card-multiple">
+          <div class="quiz-card__icon" id="icon-multiple">📝</div>
+          <h3 class="quiz-card__title" id="title-multiple">4지선다 퀴즈</h3>
+          <p class="quiz-card__desc" id="desc-multiple">4개의 보기 중 정답을 선택하는 퀴즈입니다.</p>
+          <span class="quiz-card__badge" id="badge-multiple">5문제</span>
         </a>
 
-        <a href="/quiz.html?type=ox" class="quiz-card">
-          <div class="quiz-card__icon">⭕</div>
-          <h3 class="quiz-card__title">O/X 퀴즈</h3>
-          <p class="quiz-card__desc">참과 거짓을 판단하는 퀴즈입니다.</p>
-          <span class="quiz-card__badge">5문제</span>
+        <a href="/quiz.html?type=ox" class="quiz-card" id="card-ox">
+          <div class="quiz-card__icon" id="icon-ox">⭕</div>
+          <h3 class="quiz-card__title" id="title-ox">O/X 퀴즈</h3>
+          <p class="quiz-card__desc" id="desc-ox">참과 거짓을 판단하는 퀴즈입니다.</p>
+          <span class="quiz-card__badge" id="badge-ox">5문제</span>
         </a>
       </div>
     </main>
@@ -39,5 +58,131 @@
       <p>© 2025 Quiz Reference Template</p>
     </footer>
   </div>
+
+  <script>
+    // 테마 데이터
+    const themes = {
+      default: {
+        title: '퀴즈 레퍼런스',
+        subtitle: '사내 교육 및 이벤트용 퀴즈 템플릿',
+        multiple: {
+          href: '/quiz.html?type=multiple-choice',
+          icon: '📝',
+          title: '4지선다 퀴즈',
+          desc: '4개의 보기 중 정답을 선택하는 퀴즈입니다.',
+          badge: '5문제'
+        },
+        ox: {
+          href: '/quiz.html?type=ox',
+          icon: '⭕',
+          title: 'O/X 퀴즈',
+          desc: '참과 거짓을 판단하는 퀴즈입니다.',
+          badge: '5문제'
+        }
+      },
+      cosmetic: {
+        title: 'GLOW Beauty',
+        subtitle: '나에게 맞는 스킨케어 루틴 찾기',
+        multiple: {
+          href: '/quiz.html?type=cosmetic',
+          icon: '💄',
+          title: '피부 타입 진단',
+          desc: '나의 피부 타입과 고민을 분석해보세요.',
+          badge: '5문제'
+        },
+        ox: {
+          href: '/quiz.html?type=cosmetic-ox',
+          icon: '✨',
+          title: '뷰티 상식 퀴즈',
+          desc: '스킨케어 상식을 테스트해보세요.',
+          badge: '5문제'
+        }
+      },
+      haircare: {
+        title: 'SILKY Hair Lab',
+        subtitle: '당신의 두피 & 모발 상태 체크',
+        multiple: {
+          href: '/quiz.html?type=haircare',
+          icon: '💇',
+          title: '두피/모발 진단',
+          desc: '나의 두피와 모발 상태를 체크해보세요.',
+          badge: '5문제'
+        },
+        ox: {
+          href: '/quiz.html?type=haircare-ox',
+          icon: '🧴',
+          title: '헤어케어 상식',
+          desc: '올바른 헤어케어 방법을 알아보세요.',
+          badge: '5문제'
+        }
+      },
+      event: {
+        title: '🎁 신년 이벤트',
+        subtitle: '퀴즈 풀고 경품 받자!',
+        multiple: {
+          href: '/quiz.html?type=event',
+          icon: '🎯',
+          title: '상식 퀴즈',
+          desc: '재미있는 상식 퀴즈에 도전하세요!',
+          badge: '5문제'
+        },
+        ox: {
+          href: '/quiz.html?type=event-ox',
+          icon: '🎲',
+          title: '빠른 O/X',
+          desc: '빠르게 맞춰보는 O/X 퀴즈!',
+          badge: '5문제'
+        }
+      }
+    };
+
+    let currentTheme = 'default';
+
+    // 테마 적용
+    function applyTheme(themeName) {
+      const theme = themes[themeName];
+
+      // 헤더
+      document.getElementById('main-title').textContent = theme.title;
+      document.getElementById('main-subtitle').textContent = theme.subtitle;
+
+      // 4지선다 카드
+      document.getElementById('card-multiple').href = theme.multiple.href;
+      document.getElementById('icon-multiple').textContent = theme.multiple.icon;
+      document.getElementById('title-multiple').textContent = theme.multiple.title;
+      document.getElementById('desc-multiple').textContent = theme.multiple.desc;
+      document.getElementById('badge-multiple').textContent = theme.multiple.badge;
+
+      // O/X 카드
+      document.getElementById('card-ox').href = theme.ox.href;
+      document.getElementById('icon-ox').textContent = theme.ox.icon;
+      document.getElementById('title-ox').textContent = theme.ox.title;
+      document.getElementById('desc-ox').textContent = theme.ox.desc;
+      document.getElementById('badge-ox').textContent = theme.ox.badge;
+    }
+
+    // 토글 버튼 이벤트
+    document.querySelectorAll('.toggle-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const theme = btn.dataset.theme;
+
+        // 이미 활성화된 버튼 클릭 시 비활성화 (default로)
+        if (btn.classList.contains('active')) {
+          btn.classList.remove('active');
+          currentTheme = 'default';
+          applyTheme('default');
+          return;
+        }
+
+        // 다른 버튼 비활성화
+        document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
+
+        // 현재 버튼 활성화
+        btn.classList.add('active');
+        currentTheme = theme;
+        applyTheme(theme);
+      });
+    });
+  </script>
 </body>
 </html>

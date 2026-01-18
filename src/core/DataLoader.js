@@ -42,12 +42,22 @@ export class DataLoader {
 
   /**
    * 퀴즈 타입에 따른 데이터 로드
-   * @param {string} quizType - 'multiple-choice' | 'ox'
+   * @param {string} quizType - 퀴즈 타입 문자열
    */
   async loadQuiz(quizType) {
     const fileMap = {
+      // 기본 튜토리얼
       'multiple-choice': 'multiple-choice.json',
-      'ox': 'ox-quiz.json'
+      'ox': 'ox-quiz.json',
+      // 화장품 브랜드
+      'cosmetic': 'cosmetic.json',
+      'cosmetic-ox': 'cosmetic-ox.json',
+      // 헤어케어
+      'haircare': 'haircare.json',
+      'haircare-ox': 'haircare-ox.json',
+      // 이벤트
+      'event': 'event.json',
+      'event-ox': 'event-ox.json'
     };
 
     const filename = fileMap[quizType];

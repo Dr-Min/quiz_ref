@@ -78,11 +78,24 @@ class QuizApp {
   _updateTypeLabel() {
     const labels = {
       'multiple-choice': '4지선다',
-      'ox': 'O/X'
+      'ox': 'O/X',
+      'cosmetic': '피부 진단',
+      'cosmetic-ox': '뷰티 상식',
+      'haircare': '두피/모발 진단',
+      'haircare-ox': '헤어케어 상식',
+      'event': '상식 퀴즈',
+      'event-ox': 'O/X 퀴즈'
     };
     if (this.quizTypeLabel) {
       this.quizTypeLabel.textContent = labels[this.quizType] || this.quizType;
     }
+  }
+
+  /**
+   * O/X 타입인지 확인
+   */
+  _isOXType() {
+    return this.quizType === 'ox' || this.quizType.endsWith('-ox');
   }
 
   /**
@@ -114,7 +127,7 @@ class QuizApp {
     this.progressBar = new ProgressBar(this.progressContainer);
 
     // 퀴즈 타입에 따른 컴포넌트 선택
-    if (this.quizType === 'ox') {
+    if (this._isOXType()) {
       this.quizComponent = new OXQuiz(this.quizContent);
     } else {
       this.quizComponent = new MultipleChoice(this.quizContent);
@@ -123,7 +136,7 @@ class QuizApp {
     // 선택 콜백
     this.quizComponent.onSelect = (indexOrAnswer, value) => {
       // 4지선다: value가 실제 값, O/X: indexOrAnswer가 'O' 또는 'X'
-      this.selectedAnswer = this.quizType === 'ox' ? indexOrAnswer : value;
+      this.selectedAnswer = this._isOXType() ? indexOrAnswer : value;
     };
 
     // 결과 화면
@@ -203,7 +216,7 @@ class QuizApp {
 
     // 정답/오답 표시
     const question = this.engine.getCurrentQuestion();
-    if (this.quizType === 'ox') {
+    if (this._isOXType()) {
       this.quizComponent.showResult(question.correctAnswer, this.selectedAnswer);
     } else {
       const correctIndex = question.options.indexOf(question.correctAnswer);

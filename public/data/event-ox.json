@@ -1,0 +1,37 @@
+{
+  "title": "빠른 O/X 퀴즈",
+  "description": "빠르게 맞춰보는 O/X 퀴즈!",
+  "type": "ox",
+  "questions": [
+    {
+      "id": 1,
+      "question": "대한민국의 수도는 서울이다.",
+      "correctAnswer": "O",
+      "explanation": "서울특별시는 대한민국의 수도입니다."
+    },
+    {
+      "id": 2,
+      "question": "1년은 366일이다.",
+      "correctAnswer": "X",
+      "explanation": "평년은 365일, 윤년만 366일입니다. 2024년이 윤년이었죠!"
+    },
+    {
+      "id": 3,
+      "question": "커피 원두는 나무 열매의 씨앗이다.",
+      "correctAnswer": "O",
+      "explanation": "커피 체리라는 열매의 씨앗을 로스팅한 것이 원두입니다."
+    },
+    {
+      "id": 4,
+      "question": "무지개는 7가지 색으로 이루어져 있다.",
+      "correctAnswer": "O",
+      "explanation": "빨주노초파남보 - 7가지 색이 맞습니다!"
+    },
+    {
+      "id": 5,
+      "question": "지구에서 가장 높은 산은 에베레스트산이다.",
+      "correctAnswer": "O",
+      "explanation": "해발 8,848m로 세계 최고봉입니다. 축하합니다, 퀴즈 완료! 🎉"
+    }
+  ]
+}

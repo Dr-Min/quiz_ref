@@ -1,0 +1,67 @@
+{
+  "title": "신년 상식 퀴즈",
+  "description": "재미있는 상식 퀴즈에 도전하세요!",
+  "type": "multiple-choice",
+  "questions": [
+    {
+      "id": 1,
+      "question": "2025년은 무슨 띠의 해일까요?",
+      "options": [
+        "용띠",
+        "뱀띠",
+        "말띠",
+        "양띠"
+      ],
+      "correctAnswer": "뱀띠",
+      "explanation": "2025년 을사년(乙巳年)은 푸른 뱀의 해입니다!"
+    },
+    {
+      "id": 2,
+      "question": "새해 첫날 해돋이 명소로 유명한 곳은?",
+      "options": [
+        "정동진",
+        "남산타워",
+        "광화문",
+        "해운대"
+      ],
+      "correctAnswer": "정동진",
+      "explanation": "정동진은 서울 광화문의 정동쪽에 위치해 이름이 붙여졌습니다."
+    },
+    {
+      "id": 3,
+      "question": "설날에 먹는 대표 음식은?",
+      "options": [
+        "송편",
+        "떡국",
+        "팥죽",
+        "비빔밥"
+      ],
+      "correctAnswer": "떡국",
+      "explanation": "떡국을 먹으면 나이를 한 살 더 먹는다고 하죠!"
+    },
+    {
+      "id": 4,
+      "question": "새해 인사 '복 많이 받으세요'를 영어로 하면?",
+      "options": [
+        "Good luck!",
+        "Happy New Year!",
+        "Best wishes!",
+        "Congratulations!"
+      ],
+      "correctAnswer": "Happy New Year!",
+      "explanation": "전 세계적으로 Happy New Year!가 가장 많이 쓰입니다."
+    },
+    {
+      "id": 5,
+      "question": "우리 회사의 2025년 슬로건은?",
+      "options": [
+        "함께 성장, 함께 미래",
+        "도전과 혁신",
+        "고객 중심 경영",
+        "지속 가능한 내일"
+      ],
+      "correctAnswer": "함께 성장, 함께 미래",
+      "explanation": "새해에도 함께 성장해요! 이벤트 참여 감사합니다 🎁"
+    }
+  ]
+}
