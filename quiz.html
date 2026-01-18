@@ -8,8 +8,24 @@
   <link rel="stylesheet" href="/src/styles/layout.css">
   <link rel="stylesheet" href="/src/styles/components.css">
   <link rel="stylesheet" href="/src/styles/quiz.css">
+  <link rel="stylesheet" href="/src/styles/themes.css">
 </head>
 <body>
+  <script>
+    // URL에서 테마 감지하여 body 클래스 즉시 적용
+    (function() {
+      const params = new URLSearchParams(window.location.search);
+      const type = params.get('type') || '';
+
+      if (type.startsWith('cosmetic')) {
+        document.body.classList.add('theme-cosmetic');
+      } else if (type.startsWith('haircare')) {
+        document.body.classList.add('theme-haircare');
+      } else if (type.startsWith('event')) {
+        document.body.classList.add('theme-event');
+      }
+    })();
+  </script>
   <div class="container">
     <!-- 퀴즈 헤더 -->
     <header class="quiz-header">

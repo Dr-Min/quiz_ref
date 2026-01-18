@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="/src/styles/base.css">
   <link rel="stylesheet" href="/src/styles/layout.css">
   <link rel="stylesheet" href="/src/styles/components.css">
+  <link rel="stylesheet" href="/src/styles/themes.css">
 </head>
 <body>
   <div class="container">
@@ -141,6 +142,9 @@
     // 테마 적용
     function applyTheme(themeName) {
       const theme = themes[themeName];
+
+      // body 클래스 변경 (테마 스타일 적용)
+      document.body.className = themeName !== 'default' ? `theme-${themeName}` : '';
 
       // 헤더
       document.getElementById('main-title').textContent = theme.title;

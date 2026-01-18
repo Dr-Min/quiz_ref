@@ -1,0 +1,433 @@
+/**
+ * themes.css - 테마별 스타일
+ */
+
+/* ========================================
+   기본 테마 (Default)
+   ======================================== */
+body {
+  transition: background var(--transition-normal);
+}
+
+/* ========================================
+   화장품 테마 (Cosmetic)
+   GLOW Beauty - 로즈골드 / 핑크 / 럭셔리
+   ======================================== */
+body.theme-cosmetic {
+  --color-primary: #E91E63;
+  --color-primary-hover: #C2185B;
+  --color-primary-light: #FCE4EC;
+  background: linear-gradient(135deg, #FFF5F7 0%, #FFE4EC 50%, #FFF0F5 100%);
+}
+
+body.theme-cosmetic .header__title {
+  background: linear-gradient(135deg, #E91E63, #FF6090);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+body.theme-cosmetic .header::before {
+  content: '✨';
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 2rem;
+  opacity: 0.5;
+}
+
+body.theme-cosmetic .header::after {
+  content: '💄';
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  opacity: 0.5;
+}
+
+body.theme-cosmetic .header {
+  position: relative;
+}
+
+body.theme-cosmetic .quiz-card {
+  border: 1px solid rgba(233, 30, 99, 0.1);
+  background: linear-gradient(145deg, #FFFFFF 0%, #FFF8FA 100%);
+}
+
+body.theme-cosmetic .quiz-card:hover {
+  border-color: #E91E63;
+  box-shadow: 0 10px 30px rgba(233, 30, 99, 0.15);
+}
+
+body.theme-cosmetic .quiz-card__badge {
+  background: linear-gradient(135deg, #FCE4EC, #F8BBD9);
+  color: #C2185B;
+}
+
+body.theme-cosmetic .toggle-btn.active {
+  background: linear-gradient(135deg, #E91E63, #FF6090);
+  border-color: #E91E63;
+}
+
+/* 키비주얼 패턴 */
+body.theme-cosmetic::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    radial-gradient(circle at 10% 20%, rgba(233, 30, 99, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 90% 80%, rgba(255, 96, 144, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ========================================
+   헤어케어 테마 (Haircare)
+   SILKY Hair Lab - 민트 / 청량 / 클린
+   ======================================== */
+body.theme-haircare {
+  --color-primary: #00BCD4;
+  --color-primary-hover: #0097A7;
+  --color-primary-light: #E0F7FA;
+  background: linear-gradient(135deg, #F0FDFA 0%, #E0F7FA 50%, #E8F5E9 100%);
+}
+
+body.theme-haircare .header__title {
+  background: linear-gradient(135deg, #00BCD4, #26C6DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+body.theme-haircare .header::before {
+  content: '🌿';
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 2rem;
+  opacity: 0.5;
+}
+
+body.theme-haircare .header::after {
+  content: '💧';
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  opacity: 0.5;
+}
+
+body.theme-haircare .header {
+  position: relative;
+}
+
+body.theme-haircare .quiz-card {
+  border: 1px solid rgba(0, 188, 212, 0.1);
+  background: linear-gradient(145deg, #FFFFFF 0%, #F0FDFA 100%);
+}
+
+body.theme-haircare .quiz-card:hover {
+  border-color: #00BCD4;
+  box-shadow: 0 10px 30px rgba(0, 188, 212, 0.15);
+}
+
+body.theme-haircare .quiz-card__badge {
+  background: linear-gradient(135deg, #E0F7FA, #B2EBF2);
+  color: #0097A7;
+}
+
+body.theme-haircare .toggle-btn.active {
+  background: linear-gradient(135deg, #00BCD4, #26C6DA);
+  border-color: #00BCD4;
+}
+
+/* 키비주얼 패턴 */
+body.theme-haircare::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(0, 188, 212, 0.04) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(38, 198, 218, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ========================================
+   이벤트 테마 (Event)
+   신년 이벤트 - 축제 / 화려 / 골드
+   ======================================== */
+body.theme-event {
+  --color-primary: #FF9800;
+  --color-primary-hover: #F57C00;
+  --color-primary-light: #FFF3E0;
+  background: linear-gradient(135deg, #FFFDE7 0%, #FFF8E1 50%, #FFF3E0 100%);
+}
+
+body.theme-event .header__title {
+  background: linear-gradient(135deg, #FF9800, #FFB74D);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.1); }
+}
+
+body.theme-event .header::before {
+  content: '🎊';
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 2rem;
+  animation: bounce 1s ease-in-out infinite;
+}
+
+body.theme-event .header::after {
+  content: '🎁';
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  animation: bounce 1s ease-in-out infinite 0.5s;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+body.theme-event .header {
+  position: relative;
+}
+
+body.theme-event .quiz-card {
+  border: 1px solid rgba(255, 152, 0, 0.15);
+  background: linear-gradient(145deg, #FFFFFF 0%, #FFFDE7 100%);
+}
+
+body.theme-event .quiz-card:hover {
+  border-color: #FF9800;
+  box-shadow: 0 10px 30px rgba(255, 152, 0, 0.2);
+}
+
+body.theme-event .quiz-card__badge {
+  background: linear-gradient(135deg, #FFE082, #FFD54F);
+  color: #E65100;
+  font-weight: 700;
+}
+
+body.theme-event .toggle-btn.active {
+  background: linear-gradient(135deg, #FF9800, #FFB74D);
+  border-color: #FF9800;
+}
+
+/* 축제 느낌 데코레이션 */
+body.theme-event::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    radial-gradient(circle at 15% 25%, rgba(255, 152, 0, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 85% 75%, rgba(255, 183, 77, 0.06) 0%, transparent 40%),
+    radial-gradient(circle at 50% 10%, rgba(255, 224, 130, 0.04) 0%, transparent 30%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* 컨페티 효과 */
+body.theme-event .container::before,
+body.theme-event .container::after {
+  position: fixed;
+  font-size: 1.5rem;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+body.theme-event .container::before {
+  content: '🎉';
+  top: 15%;
+  left: 5%;
+  animation: float 3s ease-in-out infinite;
+}
+
+body.theme-event .container::after {
+  content: '⭐';
+  bottom: 20%;
+  right: 5%;
+  animation: float 3s ease-in-out infinite 1.5s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(10deg); }
+}
+
+/* ========================================
+   퀴즈 페이지 테마 적용
+   ======================================== */
+
+/* 화장품 퀴즈 페이지 */
+body.theme-cosmetic .question-card {
+  border: 1px solid rgba(233, 30, 99, 0.1);
+}
+
+body.theme-cosmetic .option-btn:hover:not(.disabled) {
+  border-color: #E91E63;
+  background: #FCE4EC;
+}
+
+body.theme-cosmetic .option-btn.selected {
+  border-color: #E91E63;
+  background: #FCE4EC;
+}
+
+body.theme-cosmetic .option-btn.selected .option-label {
+  background: #E91E63;
+}
+
+body.theme-cosmetic .progress-bar__fill {
+  background: linear-gradient(90deg, #E91E63, #FF6090);
+}
+
+body.theme-cosmetic .progress-step.active {
+  background: #E91E63;
+}
+
+body.theme-cosmetic .btn--primary {
+  background: linear-gradient(135deg, #E91E63, #FF6090);
+}
+
+body.theme-cosmetic .btn--primary:hover {
+  background: linear-gradient(135deg, #C2185B, #E91E63);
+}
+
+/* 헤어케어 퀴즈 페이지 */
+body.theme-haircare .question-card {
+  border: 1px solid rgba(0, 188, 212, 0.1);
+}
+
+body.theme-haircare .option-btn:hover:not(.disabled) {
+  border-color: #00BCD4;
+  background: #E0F7FA;
+}
+
+body.theme-haircare .option-btn.selected {
+  border-color: #00BCD4;
+  background: #E0F7FA;
+}
+
+body.theme-haircare .option-btn.selected .option-label {
+  background: #00BCD4;
+}
+
+body.theme-haircare .progress-bar__fill {
+  background: linear-gradient(90deg, #00BCD4, #26C6DA);
+}
+
+body.theme-haircare .progress-step.active {
+  background: #00BCD4;
+}
+
+body.theme-haircare .btn--primary {
+  background: linear-gradient(135deg, #00BCD4, #26C6DA);
+}
+
+body.theme-haircare .btn--primary:hover {
+  background: linear-gradient(135deg, #0097A7, #00BCD4);
+}
+
+/* 이벤트 퀴즈 페이지 */
+body.theme-event .question-card {
+  border: 1px solid rgba(255, 152, 0, 0.15);
+}
+
+body.theme-event .option-btn:hover:not(.disabled) {
+  border-color: #FF9800;
+  background: #FFF3E0;
+}
+
+body.theme-event .option-btn.selected {
+  border-color: #FF9800;
+  background: #FFF3E0;
+}
+
+body.theme-event .option-btn.selected .option-label {
+  background: #FF9800;
+}
+
+body.theme-event .progress-bar__fill {
+  background: linear-gradient(90deg, #FF9800, #FFB74D);
+}
+
+body.theme-event .progress-step.active {
+  background: #FF9800;
+}
+
+body.theme-event .btn--primary {
+  background: linear-gradient(135deg, #FF9800, #FFB74D);
+}
+
+body.theme-event .btn--primary:hover {
+  background: linear-gradient(135deg, #F57C00, #FF9800);
+}
+
+/* ========================================
+   O/X 버튼 테마
+   ======================================== */
+body.theme-cosmetic .ox-btn--o:hover:not(.disabled),
+body.theme-cosmetic .ox-btn.selected.ox-btn--o {
+  border-color: #E91E63;
+  background: #FCE4EC;
+}
+
+body.theme-haircare .ox-btn--o:hover:not(.disabled),
+body.theme-haircare .ox-btn.selected.ox-btn--o {
+  border-color: #00BCD4;
+  background: #E0F7FA;
+}
+
+body.theme-event .ox-btn--o:hover:not(.disabled),
+body.theme-event .ox-btn.selected.ox-btn--o {
+  border-color: #FF9800;
+  background: #FFF3E0;
+}
+
+/* ========================================
+   결과 화면 테마
+   ======================================== */
+body.theme-cosmetic .score-circle {
+  border-color: #E91E63;
+}
+
+body.theme-cosmetic .score-grade {
+  color: #E91E63;
+}
+
+body.theme-haircare .score-circle {
+  border-color: #00BCD4;
+}
+
+body.theme-haircare .score-grade {
+  color: #00BCD4;
+}
+
+body.theme-event .score-circle {
+  border-color: #FF9800;
+}
+
+body.theme-event .score-grade {
+  color: #FF9800;
+}
