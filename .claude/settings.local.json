@@ -9,7 +9,12 @@
       "Bash(vercel login:*)",
       "Bash(git init:*)",
       "Bash(git remote add:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nInitial commit: Quiz reference template\n\n- 4지선다, O/X 퀴즈 템플릿\n- 모듈화된 구조 \\(Core, Components, Styles\\)\n- Vite 기반, Vercel 배포 준비 완료\n- 모바일 반응형 디자인\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git config:*)",
+      "Bash(git branch:*)",
+      "Bash(git push:*)",
+      "Bash(git commit:*)"
     ]
   }
 }
